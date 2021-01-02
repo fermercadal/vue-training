@@ -1,6 +1,7 @@
 const app = Vue.createApp({
   data() {
     return {
+      //courseGoalIntro: '<strong>Finish</strong> the course and ',
       courseGoalIntro: 'Finish the course and ',
       courseGoalA: 'learn Vue',
       courseGoalB: 'master Vue',
