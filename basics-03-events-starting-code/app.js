@@ -6,6 +6,10 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    submitForm(event) {
+      event.preventDefault();
+      alert('Submitted');
+    },
     setName(event, other) {
       this.name = event.target.value + ' and ' + other;
     },

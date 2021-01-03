@@ -24,6 +24,11 @@
 
       <input type="text" v-on:input="setName($event, 'Something else')">
       <p>Your name: {{ name }}</p>
+
+      <form v-on:submit="submitForm">
+        <input type="text">
+        <button>Submit</button>
+      </form>
     </section>
   </body>
 </html>
