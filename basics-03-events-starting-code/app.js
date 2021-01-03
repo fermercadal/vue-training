@@ -2,12 +2,16 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      confirmedName: ''
     };
   },
   methods: {
     submitForm(event) {
       alert('Submitted');
+    },
+    confirmName() {
+      this.confirmedName = this.name;
     },
     setName(event, other) {
       this.name = event.target.value + ' and ' + other;
