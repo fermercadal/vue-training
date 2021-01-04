@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket score</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+   <main id="basketScore" class="basketScore">
+    <div class="team">
+      <h2 class="team__name">{{ teams.a }}</h2>
+      <div class="team__points">
+        <strong>{{ score.a }}</strong>
+        points
+      </div>
+      
+      <div class="team__controls">
+        <button v-on:click="scoreUp('a',1)">Single</button>
+        <button v-on:click="scoreUp('a',2)">Double</button>
+        <button v-on:click="scoreUp('a',3)">Triple</button>
+      </div>
+    </div>
+
+    <div class="team">
+      <h2 class="team__name">{{ teams.b }}</h2>
+      <div class="team__points">
+        <strong>{{ score.b }}</strong>
+        points
+      </div>
+      
+      <div class="team__controls">
+        <button v-on:click="scoreUp('b',1)">Single</button>
+        <button v-on:click="scoreUp('b',2)">Double</button>
+        <button v-on:click="scoreUp('b',3)">Triple</button>
+      </div>
+    </div>
+   </main>
+  </body>
+</html>
