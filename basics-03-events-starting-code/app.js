@@ -2,9 +2,17 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: 'my cool name',
+      name: '',
       confirmedName: ''
     };
+  },
+  computed: {
+    fullname() {
+      if(this.name === '') {
+        return '';
+      } 
+      return this.name + ' ' + 'Skywalker';
+    }
   },
   methods: {
     submitForm(event) {
