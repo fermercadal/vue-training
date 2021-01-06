@@ -13,7 +13,7 @@
   <body>
    <main id="basketScore" class="basketScore">
     <div class="team">
-      <h2 class="team__name">{{ teams.a }}</h2>
+      <input class="team__name" v-model="teams.a" />
       <div class="team__points">
         <strong>{{ score.a }}</strong>
         points
@@ -27,7 +27,7 @@
     </div>
 
     <div class="team">
-      <h2 class="team__name">{{ teams.b }}</h2>
+      <input class="team__name" v-model="teams.b" />
       <div class="team__points">
         <strong>{{ score.b }}</strong>
         points
