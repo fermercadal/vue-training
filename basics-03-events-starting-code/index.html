@@ -31,9 +31,11 @@
       <p>Your name: {{ confirmedName }}</p>
 
       <form v-on:submit.prevent="submitForm">
-        <input type="text" />
+        <input type="text" v-model="name"/>
         <button>Submit</button>
       </form>
+
+      <button v-on:click="resetInput">Reset</button>
     </section>
   </body>
 </html>
