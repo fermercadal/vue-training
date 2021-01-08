@@ -3,15 +3,24 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: '',
-      confirmedName: ''
+      lastName: '',
+      //fullname: '',
+      //confirmedName: ''
     };
+  },
+  watch: {
+    counter(value) {
+      if( value > 50) {
+        this.counter = 0;
+      }
+    }
   },
   computed: {
     fullname() {
-      if(this.name === '') {
+      if(this.name === '' || this.lastName === '') {
         return '';
       } 
-      return this.name + ' ' + 'Skywalker';
+      return this.name + ' ' + this.lastName;
     }
   },
   methods: {
@@ -19,12 +28,10 @@ const app = Vue.createApp({
       alert('Submitted');
     },
     resetInput() {
-      this.name = ''
+      this.name = '';
+      this.lastName = '';
     }
     ,
-    confirmName() {
-      this.confirmedName = this.name;
-    },
     setName(event, other) {
       this.name = event.target.value + ' and ' + other;
     },

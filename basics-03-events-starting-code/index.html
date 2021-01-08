@@ -25,8 +25,11 @@
 
       <input
         type="text"
-        v-on:input="setName($event, '...')"
-        v-on:keyup.enter="confirmName"
+        v-model="name"
+      />
+      <input
+        type="text"
+        v-model="lastName"
       />
       <p>Your name: {{ fullname }}</p>
       <!--
